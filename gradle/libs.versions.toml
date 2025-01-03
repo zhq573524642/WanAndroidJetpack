@@ -1,0 +1,72 @@
+[versions]
+agp = "8.5.2"
+kotlin = "1.9.0"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+material = "1.10.0"
+activity = "1.8.0"
+fragment = "1.5.3"
+constraintlayout = "2.1.4"
+lifecycle-viewmodel = "2.5.0"
+lifrcycle-livedata = "2.4.1"
+lifecycle-runtime = "2.5.1"
+androidx-paging = "3.3.5"
+
+okhttp3 = "4.9.0"
+retrofit = "2.9.0"
+smartRefreshLayout = "3.0.0-alpha"
+koin = "2.2.0-rc-3"
+banner = "2.2.3"
+glide = "4.16.0"
+
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment" }
+lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-viewmodel" }
+lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifrcycle-livedata" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime" }
+androidx-paging-ktx = { group = "androidx.paging", name = "paging-runtime-ktx", version.ref = "androidx-paging" }
+#Okhttp
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3" }
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3" }
+#retrofit
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+#SmartRefreshLayout
+#核心必须依赖
+refresh-layout = { group = "io.github.scwang90", name = "refresh-layout-kernel", version.ref = "smartRefreshLayout" }
+#经典刷新头
+refresh-layout-header = { group = "io.github.scwang90", name = "refresh-header-classics", version.ref = "smartRefreshLayout" }
+#koin
+koin-core = { group = "org.koin", name = "koin-core", version.ref = "koin" }
+koin-core-ext = { group = "org.koin", name = "koin-core-ext", version.ref = "koin" }
+koin-androidx-scope = { group = "org.koin", name = "koin-androidx-scope", version.ref = "koin" }
+koin-androidx-viewmodel = { group = "org.koin", name = "koin-androidx-viewmodel", version.ref = "koin" }
+koin-androidx-fragment = { group = "org.koin", name = "koin-androidx-fragment", version.ref = "koin" }
+koin-androidx-ext = { group = "org.koin", name = "koin-androidx-ext", version.ref = "koin" }
+#Banner
+banner = { group = "io.github.youth5201314", name = "banner", version.ref = "banner" }
+#Glide
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
+
+
+
+

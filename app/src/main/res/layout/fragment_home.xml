@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_f5f5f5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp12"
+                android:layout_weight="1"
+                android:text="首页"
+                android:textColor="@color/color_262626"
+                android:textSize="@dimen/sp23"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp12"
+                android:src="@drawable/ic_search" />
+
+            <ImageView
+                android:id="@+id/iv_message"
+                android:layout_width="@dimen/dp25"
+                android:layout_height="@dimen/dp25"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp12"
+                android:src="@drawable/ic_home_message" />
+
+        </LinearLayout>
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.zhq.commonlib.statelayout.source.StateLayout
+                android:id="@+id/state_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp200"
+                            android:layout_marginStart="@dimen/dp12"
+                            android:layout_marginEnd="@dimen/dp12"
+                            android:layout_marginBottom="@dimen/dp12"
+                            app:banner_auto_loop="true"
+                            app:banner_indicator_gravity="center"
+                            app:banner_indicator_marginBottom="@dimen/dp10"
+                            app:banner_loop_time="2000"
+                            app:banner_orientation="horizontal"
+                            app:banner_radius="@dimen/dp10" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+            </com.zhq.commonlib.statelayout.source.StateLayout>
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+
+</layout>

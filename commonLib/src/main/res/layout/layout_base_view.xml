@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.zhq.commonlib.statelayout.source.StateLayout
+            android:id="@+id/baseStateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/flContentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.zhq.commonlib.statelayout.source.StateLayout>
+    </FrameLayout>
+</layout>

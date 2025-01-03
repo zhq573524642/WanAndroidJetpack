@@ -1,0 +1,76 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    id 'kotlin-kapt'
+
+}
+
+android {
+    namespace 'com.zhq.commonlib'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 24
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    kapt {
+        generateStubs = true
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+dependencies {
+    api libs.androidx.core.ktx
+    api libs.androidx.appcompat
+    api libs.material
+    api libs.androidx.constraintlayout
+    testApi libs.junit
+    androidTestApi libs.androidx.junit
+    androidTestApi libs.androidx.espresso.core
+    //androidx
+    api libs.androidx.activity.ktx
+    api libs.androidx.fragment.ktx
+    api libs.lifecycle.runtime.ktx
+    api libs.lifecycle.viewmodel.ktx
+    api libs.lifecycle.livedata.ktx
+    api libs.androidx.paging.ktx
+    //okhttp
+    api libs.okhttp
+    api libs.okhttp.logging.interceptor
+    //retrofit
+    api libs.retrofit
+    api libs.retrofit.converter.gson
+    //SmartRefreshLayout
+    api libs.refresh.layout
+    api libs.refresh.layout.header
+    //Koin
+    api libs.koin.core
+    api libs.koin.core.ext
+    api libs.koin.androidx.scope
+    api libs.koin.androidx.viewmodel
+    api libs.koin.androidx.fragment
+    api libs.koin.androidx.ext
+    //banner
+    api libs.banner
+    //Glide
+    implementation libs.glide
+    kapt libs.glide.compiler
+}
