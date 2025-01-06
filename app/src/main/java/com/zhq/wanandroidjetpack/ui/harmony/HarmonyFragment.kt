@@ -12,9 +12,7 @@ class HarmonyFragment : BaseVMFragment<FragmentHarmonyBinding>() {
     }
 
     override fun initView() {
-        baseRefreshLayout.setOnRefreshListener{
 
-        }
     }
 
     override fun observe() {

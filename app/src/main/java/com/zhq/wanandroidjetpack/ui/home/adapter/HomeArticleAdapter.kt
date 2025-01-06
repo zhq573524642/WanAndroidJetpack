@@ -22,7 +22,10 @@ class HomeArticleAdapter() :
         diff = AsyncListDiffer(this, MyCallback())
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeArticleAdapter.MyViewHolder {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): HomeArticleAdapter.MyViewHolder {
         val binding = DataBindingUtil.inflate<ItemHomeArticleBinding>(
             LayoutInflater.from(parent.context),
             R.layout.item_home_article,
@@ -40,12 +43,13 @@ class HomeArticleAdapter() :
         holder.binding.tvType.text = "${data.superChapterName}/${data.chapterName}"
         holder.binding.tag1.visibility = if (data.fresh) View.VISIBLE else View.GONE
         holder.binding.tag2.visibility = if (data.superChapterId == 408) View.VISIBLE else View.GONE
-        holder.binding.tvAuthor.text = if (data.author.isEmpty()) data.shareUser else data.author
+        holder.binding.tvAuthor.text =
+            if (data.author.isEmpty()) "分享者：${data.shareUser}" else "作者：${data.author}"
 
         if (data.collect) {
-            holder.binding.ivCollect.setImageResource(R.drawable.icon_collect_2)
+            holder.binding.ivCollect.setImageResource(R.drawable.ic_collect_select)
         } else {
-            holder.binding.ivCollect.setImageResource(R.drawable.icon_collect_1)
+            holder.binding.ivCollect.setImageResource(R.drawable.ic_collect_unselect)
         }
         holder.itemView.setOnClickListener {
             mBlock?.invoke(1, position)
