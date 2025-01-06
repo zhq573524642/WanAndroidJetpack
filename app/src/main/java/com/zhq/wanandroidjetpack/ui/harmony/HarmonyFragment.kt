@@ -12,7 +12,8 @@ class HarmonyFragment : BaseVMFragment<FragmentHarmonyBinding>() {
     }
 
     override fun initView() {
-
+        enableBaseRefresh(false)
+        enableBaseRefresh(false)
     }
 
     override fun observe() {

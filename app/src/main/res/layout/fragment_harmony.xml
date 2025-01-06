@@ -14,20 +14,97 @@
         tools:context=".ui.harmony.HarmonyFragment">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:background="@color/color_262626"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/color_262626"
+            android:orientation="vertical">
+
             <TextView
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp23"
-                android:text="OpenHarmony三方库"
-                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dp30"
                 android:layout_marginBottom="@dimen/dp30"
-                android:layout_gravity="center_horizontal"
+                android:text="OpenHarmony三方库"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp23"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginStart="@dimen/dp25"
+                android:layout_marginEnd="@dimen/dp25"
+                android:background="@drawable/bg_r_10_f5f5f5"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:src="@drawable/ic_search" />
+
+                <EditText
+                    android:id="@+id/et_input"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_weight="1"
+                    android:background="@color/color_00000000"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:textSize="@dimen/sp13" />
+
+                <TextView
+                    android:id="@+id/tv_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp10"
+                    android:paddingEnd="@dimen/dp10"
+                    android:text="搜索"
+                    android:textColor="@color/app_theme_color"
+                    android:textSize="@dimen/sp15" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_r_8dp_stroke_white"
+                    android:padding="@dimen/dp8"
+                    android:text="ohos"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12"
+                    android:layout_marginEnd="@dimen/dp12"
+                    android:background="@drawable/bg_r_8dp_stroke_white"
+                    android:padding="@dimen/dp8"
+                    android:text="axios"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_r_8dp_stroke_white"
+                    android:padding="@dimen/dp8"
+                    android:text="http"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
