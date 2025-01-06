@@ -51,7 +51,7 @@ abstract class BaseActivity<VB : ViewDataBinding>() : AppCompatActivity() {
         mBaseBinding =
             DataBindingUtil.setContentView<LayoutBaseViewBinding>(
                 this,
-                 R.layout.layout_base_view
+                R.layout.layout_base_view
             )
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -62,6 +62,9 @@ abstract class BaseActivity<VB : ViewDataBinding>() : AppCompatActivity() {
         mBaseBinding.flContentContainer.addView(baseView)
         stateLayout = mBaseBinding.baseStateLayout
         mBinding = DataBindingUtil.bind<VB>(baseView)!!
+        mBaseBinding.btnLeftBack.setOnClickListener {
+            this.finish()
+        }
         initView()
     }
 
@@ -116,6 +119,12 @@ abstract class BaseActivity<VB : ViewDataBinding>() : AppCompatActivity() {
             }
         }
     }
+
+    fun showTitle(title: String) {
+        mBaseBinding.titleView.visibility = View.VISIBLE
+        mBaseBinding.tvTitle.text = title
+    }
+
 
     fun showLoading() {
         LoadingUtil.showLoadingDialog(mContext, true)

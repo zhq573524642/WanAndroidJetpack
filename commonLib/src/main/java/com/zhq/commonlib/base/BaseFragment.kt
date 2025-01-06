@@ -1,6 +1,7 @@
 package com.zhq.commonlib.base
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -70,6 +71,18 @@ abstract class BaseFragment<VB : ViewDataBinding> : Fragment() {
     protected abstract fun getLayoutId(): Int
 
     protected abstract fun initView()
+
+
+    inline fun <reified T> startActivity(context: Context) {
+        val intent = Intent(context, T::class.java)
+        context.startActivity(intent)
+    }
+
+    inline fun <reified T> startActivityForParams(context: Context, block: Intent.() -> Unit) {
+        val intent = Intent(context, T::class.java)
+        intent.block()
+        context.startActivity(intent)
+    }
 
     fun enableBaseRefresh(isEnable: Boolean = true) {
         if (::baseRefreshLayout.isInitialized) {

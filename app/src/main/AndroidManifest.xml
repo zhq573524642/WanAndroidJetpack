@@ -17,6 +17,13 @@
         android:theme="@style/Theme.WanAndroidJetpack"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.search.HomeSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.web.WebActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

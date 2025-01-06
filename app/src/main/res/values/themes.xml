@@ -34,4 +34,13 @@
         <item name="android:paddingTop">15dp</item>
         <item name="android:paddingBottom">15dp</item>
     </style>
+
+    <style name="style_tv_sub_title">
+        <item name="android:textSize">@dimen/sp18</item>
+        <item name="android:textColor">@color/color_262626</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/dp15</item>
+    </style>
 </resources>

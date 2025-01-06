@@ -21,6 +21,7 @@ smartRefreshLayout = "3.0.0-alpha"
 koin = "2.2.0-rc-3"
 banner = "2.2.3"
 glide = "4.16.0"
+activityVersion = "1.8.0"
 
 
 [libraries]
@@ -60,6 +61,7 @@ banner = { group = "io.github.youth5201314", name = "banner", version.ref = "ban
 #Glide
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activityVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

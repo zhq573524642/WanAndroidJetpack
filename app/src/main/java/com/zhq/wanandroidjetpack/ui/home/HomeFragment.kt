@@ -14,7 +14,9 @@ import com.zhq.wanandroidjetpack.databinding.FragmentHomeBinding
 import com.zhq.wanandroidjetpack.ui.home.adapter.HomeArticleAdapter
 import com.zhq.wanandroidjetpack.ui.home.adapter.MyBannerAdapter
 import com.zhq.wanandroidjetpack.ui.home.bean.BannerData
+import com.zhq.wanandroidjetpack.ui.home.search.HomeSearchActivity
 import com.zhq.wanandroidjetpack.ui.home.viewmodel.HomeViewModel
+import com.zhq.wanandroidjetpack.ui.web.WebActivity
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 /**
@@ -36,6 +38,9 @@ class HomeFragment : BaseVMFragment<FragmentHomeBinding>() {
     override fun initView() {
         enableBaseRefresh(false)
         enableBaseLoadMore(false)
+        mBinding.ivSearch.setOnClickListener {
+            startActivity<HomeSearchActivity>(mContext)
+        }
         initBanner()
         initRefresh()
         initRecyclerView()
@@ -63,6 +68,10 @@ class HomeFragment : BaseVMFragment<FragmentHomeBinding>() {
             if (item != null) {
                 if (tag == 1) {
                     //条目点击
+                    startActivityForParams<WebActivity>(mContext) {
+                        putExtra("web_url", item.link)
+                        putExtra("web_title", item.title)
+                    }
                 } else {
                     //收藏
                     item.collect = !item.collect
@@ -121,27 +130,29 @@ class HomeFragment : BaseVMFragment<FragmentHomeBinding>() {
             }
         })
 
-        homeViewModel.article.observe(this, object : BaseStateObserver<CommonPageBean<CommonArticleItem>>() {
-            override fun getRespDataSuccess(it: CommonPageBean<CommonArticleItem>) {
-                finishRefresh()
-                isPageLoadOver = it.over
-                if (pageIndex == 0) {
-                    if (it.datas.isEmpty()){
-                        showEmptyState()
+        homeViewModel.article.observe(
+            this,
+            object : BaseStateObserver<CommonPageBean<CommonArticleItem>>() {
+                override fun getRespDataSuccess(it: CommonPageBean<CommonArticleItem>) {
+                    finishRefresh()
+                    isPageLoadOver = it.over
+                    if (pageIndex == 0) {
+                        if (it.datas.isEmpty()) {
+                            showEmptyState()
+                        }
+                        list.clear()
+                        homeArticleAdapter.setData(null)
                     }
-                    list.clear()
-                    homeArticleAdapter.setData(null)
+                    list.addAll(it.datas)
+                    showContentState()
+                    pageIndex++
+                    homeArticleAdapter.setData(list)
                 }
-                list.addAll(it.datas)
-                showContentState()
-                pageIndex++
-                homeArticleAdapter.setData(list)
-            }
 
-            override fun getRespDataEnd() {
-                finishRefresh()
-            }
+                override fun getRespDataEnd() {
+                    finishRefresh()
+                }
 
-        })
+            })
     }
 }
