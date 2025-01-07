@@ -16,7 +16,7 @@ object GlideUtils {
     fun loadImage(context: Context, imageView: ImageView, url: String?) {
         Glide.with(context)
             .load(url)
-            .apply(RequestOptions.bitmapTransform(RoundedCorners(30)))
+            .apply(RequestOptions.bitmapTransform(RoundedCorners(40)))
             .into(imageView)
     }
 }

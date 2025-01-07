@@ -2,6 +2,7 @@ package com.zhq.commonlib.base
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -56,6 +57,8 @@ abstract class BaseFragment<VB : ViewDataBinding> : Fragment() {
         mBinding = DataBindingUtil.bind<VB>(baseView)!!
         stateLayout = mBaseBinding.baseStateLayout
         baseRefreshLayout = mBaseBinding.baseRefreshLayout
+        enableBaseRefresh(false)
+        enableBaseLoadMore(false)
         return mBaseBinding.root
     }
 

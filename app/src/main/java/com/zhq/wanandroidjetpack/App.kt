@@ -19,6 +19,7 @@ import com.zhq.commonlib.utils.SpUtils
 import com.zhq.commonlib.utils.ToastUtils
 import com.zhq.wanandroidjetpack.di.harmonyModule
 import com.zhq.wanandroidjetpack.di.homeModule
+import com.zhq.wanandroidjetpack.di.projectModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
@@ -35,7 +36,7 @@ class App :Application() {
         @SuppressLint("StaticFieldLeak")
         lateinit var mContext: Context
     }
-    private val modules = mutableListOf(homeModule, harmonyModule)
+    private val modules = mutableListOf(homeModule, harmonyModule, projectModule)
     init {
         SmartRefreshLayout.setDefaultRefreshHeaderCreator(object : DefaultRefreshHeaderCreator {
             override fun createRefreshHeader(
@@ -54,6 +55,7 @@ class App :Application() {
                 layout: RefreshLayout
             ): RefreshFooter {
                 //指定为经典Footer，默认是 BallPulseFooter
+                layout.setPrimaryColorsId(R.color.color_f5f5f5,R.color.black)
                 return ClassicsFooter(context).setDrawableSize(20f)
             }
 

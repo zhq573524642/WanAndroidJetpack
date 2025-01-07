@@ -43,4 +43,23 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">@dimen/dp15</item>
     </style>
+
+    <style name="style_tv_title">
+        <item name="android:textSize">@dimen/sp30</item>
+        <item name="android:textColor">@color/color_262626</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/dp15</item>
+    </style>
+    <style name="style_tab_selected">
+        <item name="android:textSize">@dimen/sp16</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/app_theme_color</item>
+    </style>
+    <style name="style_tab_unselected">
+        <item name="android:textSize">@dimen/sp13</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/color_999999</item>
+    </style>
 </resources>

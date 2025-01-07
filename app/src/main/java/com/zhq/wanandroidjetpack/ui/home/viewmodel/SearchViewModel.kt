@@ -3,7 +3,6 @@ package com.zhq.wanandroidjetpack.ui.home.viewmodel
 import com.zhq.commonlib.base.BaseViewModel
 import com.zhq.commonlib.net.ResponseStateData
 import com.zhq.wanandroidjetpack.repo.HomeRepo
-import com.zhq.wanandroidjetpack.repo.SearchRepo
 import com.zhq.wanandroidjetpack.ui.home.bean.SearchHotWords
 
 /**

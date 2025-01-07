@@ -4,7 +4,6 @@ import com.zhq.commonlib.net.RetrofitManager
 import com.zhq.wanandroidjetpack.api.HomeApi
 import com.zhq.wanandroidjetpack.repo.HarmonyRepo
 import com.zhq.wanandroidjetpack.repo.HomeRepo
-import com.zhq.wanandroidjetpack.repo.SearchRepo
 import com.zhq.wanandroidjetpack.ui.harmony.viewmodel.HarmonyViewModel
 import com.zhq.wanandroidjetpack.ui.home.viewmodel.HomeViewModel
 import com.zhq.wanandroidjetpack.ui.home.viewmodel.SearchViewModel

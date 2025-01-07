@@ -18,14 +18,11 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/style_tv_title"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp12"
                 android:layout_weight="1"
-                android:text="首页"
-                android:textColor="@color/color_262626"
-                android:textSize="@dimen/sp23"
-                android:textStyle="bold" />
+                android:layout_height="wrap_content"
+                android:text="首页" />
 
             <ImageView
                 android:id="@+id/iv_search"
