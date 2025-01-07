@@ -30,6 +30,7 @@ class WebActivity : BaseActivity<ActivityWebBinding>() {
     }
 
     private fun initWebView() {
+        mBinding.webView.settings.javaScriptEnabled=true
         mBinding.webView.webViewClient = MyWebViewClient()
         mBinding.webView.webChromeClient = WebChromeClient()
     }

@@ -3,6 +3,7 @@ package com.zhq.wanandroidjetpack.api
 import com.zhq.commonlib.net.BaseResponse
 import com.zhq.ktlearn.base.CommonArticleItem
 import com.zhq.ktlearn.base.CommonPageBean
+import com.zhq.wanandroidjetpack.ui.harmony.bean.HarmonyBean
 import com.zhq.wanandroidjetpack.ui.home.bean.BannerData
 import com.zhq.wanandroidjetpack.ui.home.bean.SearchHotWords
 import retrofit2.http.GET
@@ -34,4 +35,5 @@ interface HomeApi {
     //常用网站
     @GET("friend/json")
     suspend fun getCommonWebSite(): BaseResponse<List<SearchHotWords>>
+
 }

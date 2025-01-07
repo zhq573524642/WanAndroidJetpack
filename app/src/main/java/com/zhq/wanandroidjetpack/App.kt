@@ -17,6 +17,7 @@ import com.zhq.commonlib.statelayout.source.StateLayout
 import com.zhq.commonlib.utils.LogUtil
 import com.zhq.commonlib.utils.SpUtils
 import com.zhq.commonlib.utils.ToastUtils
+import com.zhq.wanandroidjetpack.di.harmonyModule
 import com.zhq.wanandroidjetpack.di.homeModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -34,7 +35,7 @@ class App :Application() {
         @SuppressLint("StaticFieldLeak")
         lateinit var mContext: Context
     }
-    private val modules = mutableListOf(homeModule)
+    private val modules = mutableListOf(homeModule, harmonyModule)
     init {
         SmartRefreshLayout.setDefaultRefreshHeaderCreator(object : DefaultRefreshHeaderCreator {
             override fun createRefreshHeader(

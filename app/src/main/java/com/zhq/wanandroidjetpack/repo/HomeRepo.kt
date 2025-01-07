@@ -6,6 +6,7 @@ import com.zhq.ktlearn.base.CommonArticleItem
 import com.zhq.ktlearn.base.CommonPageBean
 import com.zhq.wanandroidjetpack.api.HomeApi
 import com.zhq.wanandroidjetpack.ui.home.bean.BannerData
+import com.zhq.wanandroidjetpack.ui.home.bean.SearchHotWords
 
 /**
  * @Author ZhangHuiQiang
@@ -29,5 +30,13 @@ class HomeRepo(private val api: HomeApi) : BaseRepository() {
                 api.getArticleList(currentPage, 10)
             }, data
         )
+
+    suspend fun getSearchHotWords(data: ResponseStateData<List<SearchHotWords>>) = handleResponse({
+        api.getSearchHotWords()
+    }, data)
+
+    suspend fun getCommonWebSite(data: ResponseStateData<List<SearchHotWords>>)=handleResponse({
+        api.getCommonWebSite()
+    },data)
 }
 

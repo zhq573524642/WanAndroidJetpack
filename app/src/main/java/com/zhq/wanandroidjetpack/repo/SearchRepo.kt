@@ -12,11 +12,5 @@ import com.zhq.wanandroidjetpack.ui.home.bean.SearchHotWords
  */
 class SearchRepo(private val api: HomeApi) : BaseRepository() {
 
-    suspend fun getSearchHotWords(data: ResponseStateData<List<SearchHotWords>>) = handleResponse({
-        api.getSearchHotWords()
-    }, data)
 
-    suspend fun getCommonWebSite(data: ResponseStateData<List<SearchHotWords>>)=handleResponse({
-        api.getCommonWebSite()
-    },data)
 }

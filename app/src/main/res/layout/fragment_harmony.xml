@@ -70,42 +70,50 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_search_tag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp20"
-                android:layout_gravity="center_horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_r_8dp_stroke_white"
-                    android:padding="@dimen/dp8"
-                    android:text="ohos"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp12" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp12"
-                    android:layout_marginEnd="@dimen/dp12"
-                    android:background="@drawable/bg_r_8dp_stroke_white"
-                    android:padding="@dimen/dp8"
-                    android:text="axios"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp12" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_r_8dp_stroke_white"
-                    android:padding="@dimen/dp8"
-                    android:text="http"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp12" />
-            </LinearLayout>
+                android:layout_marginBottom="@dimen/dp20"/>
         </LinearLayout>
 
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_tools"
+                    style="@style/style_tv_sub_title" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_title_links"
+                    style="@style/style_tv_sub_title" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_links"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_title_open"
+                    style="@style/style_tv_sub_title" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_open"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 </layout>
