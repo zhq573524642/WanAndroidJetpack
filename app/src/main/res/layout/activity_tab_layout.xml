@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+     <ScrollView
+         tools:context=".ui.note.tablayout.TabLayoutActivity"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+         <LinearLayout
+             android:id="@+id/main"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_1"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabMode="auto" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_2"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabIndicatorFullWidth="false"
+                 app:tabMode="auto" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_3"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabMode="auto"
+                 app:tabRippleColor="#00ff00"
+                 app:tabSelectedTextColor="#ff0000"
+                 app:tabTextAppearance="@style/style_tab_selected"
+                 app:tabTextColor="#999999" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_4"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabIndicatorColor="#00ff00"
+                 app:tabIndicatorGravity="bottom"
+                 app:tabIndicatorHeight="5dp"
+                 app:tabMode="auto" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_5"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabIndicatorColor="#00ffff"
+                 app:tabIndicatorGravity="center"
+                 app:tabIndicatorHeight="5dp"
+                 app:tabMode="auto" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_6"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabIndicatorColor="#ff0000"
+                 app:tabIndicatorGravity="top"
+                 app:tabIndicatorHeight="5dp"
+                 app:tabMode="auto" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_7"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabIndicatorColor="#ffff00"
+                 app:tabIndicatorGravity="stretch"
+                 app:tabIndicatorHeight="5dp"
+                 app:tabMode="auto" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_8"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabMode="auto" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_9"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabIndicator="@drawable/shape_tab_indicator"
+                 app:tabIndicatorColor="#ff0000"
+                 app:tabMode="auto" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_10"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabIndicator="@drawable/shape_tab_indicator"
+                 app:tabMode="auto" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_11"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/dp50"
+                 android:layout_marginTop="5dp"
+                 android:layout_marginBottom="5dp"
+                 android:background="@drawable/shape_tab_layout_bg"
+                 app:tabIndicator="@drawable/shape_full_tan_indicator"
+                 app:tabIndicatorColor="@color/color_00000000"
+                 app:tabIndicatorGravity="center"
+                 app:tabMode="auto"
+                 app:tabSelectedTextColor="@color/white"
+                 app:tabTextColor="@color/color_999999" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_12"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/dp50"
+                 android:layout_marginTop="5dp"
+                 android:layout_marginBottom="5dp"
+                 android:background="@drawable/shape_tab_layout_bg"
+                 app:tabIndicator="@drawable/shape_full_tan_indicator_red"
+                 app:tabIndicatorColor="@color/color_00000000"
+                 app:tabIndicatorGravity="center"
+                 app:tabMode="auto"
+                 app:tabSelectedTextColor="@color/white"
+                 app:tabTextColor="@color/white" />
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_13"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabIndicator="@drawable/shape_tab_indicator"
+                 app:tabIndicatorColor="#ff0000"
+                 app:tabMode="auto" />
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <com.google.android.material.tabs.TabLayout
+                     android:id="@+id/tab_layout_14"
+                     android:layout_width="0dp"
+                     app:tabMode="scrollable"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1" />
+
+                 <ImageView
+                     android:id="@+id/iv_have_more"
+                     android:layout_width="@dimen/dp25"
+                     android:layout_height="@dimen/dp25"
+                     android:layout_gravity="center_vertical"
+                     android:layout_marginStart="5dp"
+                     android:layout_marginEnd="5dp"
+                     android:src="@drawable/ic_right_arrow" />
+             </LinearLayout>
+
+             <com.google.android.material.tabs.TabLayout
+                 android:id="@+id/tab_layout_15"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:tabMode="fixed" />
+
+             <androidx.viewpager.widget.ViewPager
+                 android:id="@+id/viewPager"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/dp50" />
+
+             <androidx.viewpager2.widget.ViewPager2
+                 android:id="@+id/viewPager2"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/dp50" />
+         </LinearLayout>
+     </ScrollView>
+
+</layout>

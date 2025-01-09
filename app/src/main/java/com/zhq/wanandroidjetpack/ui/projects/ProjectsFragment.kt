@@ -7,6 +7,7 @@ import com.zhq.commonlib.base.BaseVMFragment
 import com.zhq.commonlib.net.BaseStateObserver
 import com.zhq.wanandroidjetpack.R
 import com.zhq.wanandroidjetpack.databinding.FragmentProjectsBinding
+import com.zhq.wanandroidjetpack.ui.note.MyLearnNoteActivity
 import com.zhq.wanandroidjetpack.ui.projects.adapter.ProjectFragmentPageAdapter
 import com.zhq.wanandroidjetpack.ui.projects.bean.ProjectType
 import com.zhq.wanandroidjetpack.ui.projects.detail.ProjectDetailFragment
@@ -26,7 +27,10 @@ class ProjectsFragment : BaseVMFragment<FragmentProjectsBinding>() {
     }
 
     override fun initView() {
-        mViewModel.getProjectsType()
+        mBinding.btnMyNote.setOnClickListener {
+            startActivity<MyLearnNoteActivity>(mContext)
+        }
+//        mViewModel.getProjectsType()
     }
 
     private fun initTabLayout(list: List<ProjectType>) {

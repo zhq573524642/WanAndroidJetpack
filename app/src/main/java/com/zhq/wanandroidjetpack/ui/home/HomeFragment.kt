@@ -44,8 +44,8 @@ class HomeFragment : BaseVMFragment<FragmentHomeBinding>() {
         initBanner()
         initRefresh()
         initRecyclerView()
-        homeViewModel.getBannerData()
-        homeViewModel.getArticle(pageIndex)
+//        homeViewModel.getBannerData()
+//        homeViewModel.getArticle(pageIndex)
     }
 
     private fun initBanner() {
